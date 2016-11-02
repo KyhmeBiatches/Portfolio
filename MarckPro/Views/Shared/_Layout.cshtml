@@ -11,24 +11,24 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-               
-            </div>
-            <div class="navbar-collapse collapse">
-                
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+@*    <div class="navbar navbar-inverse navbar-fixed-top">*@
+@*        <div class="container">*@
+@*            <div class="navbar-header">*@
+@*                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*@
+@*                    <span class="icon-bar"></span>*@
+@*                    <span class="icon-bar"></span>*@
+@*                    <span class="icon-bar"></span>*@
+@*                </button>*@
+@*               *@
+@*            </div>*@
+@*            <div class="navbar-collapse collapse">*@
+@*                *@
+@*                @Html.Partial("_LoginPartial")*@
+@*            </div>*@
+@*        </div>*@
+@*    </div>*@
     <div style="position: relative; left: 0; top: 0;">
-        <img src="~/Content/150842_1759698597380_6256332_n.jpg" width="150px" height="150px" style="position: relative; top: 0; left: 0;"" />
+        <img src="~/Content/150842_1759698597380_6256332_n.jpg" class="img-thumbnail" width="150px" height="150px" style="position: relative; top: 0; left: 0; margin-top: 20px;" />
 
         <div class="container"  style="position: absolute;  top: 150px; left: 0px;">
             @{ var controller = ViewContext.RouteData.Values["controller"]; }
