@@ -28,9 +28,8 @@
 @*        </div>*@
 @*    </div>*@
     <div style="position: relative; left: 0; top: 0;">
-        <img src="~/Content/150842_1759698597380_6256332_n.jpg" class="img-thumbnail" width="150px" height="150px" style="position: relative; top: 0; left: 0; margin-top: 20px;" />
-
-        <div class="container"  style="position: absolute;  top: 150px; left: 0px;">
+        <div class="container" style="position: absolute; top: 50px; left: 0px;">
+            <img src="~/Content/150842_1759698597380_6256332_n.jpg" class="img-thumbnail thumbnail-img" />
             @{ var controller = ViewContext.RouteData.Values["controller"]; }
             <div class="navbar navbar-default">
                 <ul class="nav nav-pills nav-stacked">
@@ -43,18 +42,15 @@
 
                 </ul>
             </div>
+            <div>
+                <h3>Kontakt</h3>
+                <p>Tlf:12345678</p>
+                <p>Mail:matt@matt.matt</p>
+                <p>By: CopenFUCK</p>
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.instagram.com">Instagram</a>
+            </div>
         </div>
-    </div>
-    <div style="position: absolute;  top: 370px; left: 25px;">
-        <h3>Kontakt</h3>
-        <p>Tlf:12345678</p>
-        <p>Mail:matt@matt.matt</p>
-        <p>By: CopenFUCK</p>
-        <a href="https://www.facebook.com">Facebook</a>
-        
-    </div>
-    <div style="position: absolute;  top: 545px; left: 25px;">
-        <a href="https://www.instagram.com">Instagram</a>
     </div>
     <div class="container body-content">
         @RenderBody()
