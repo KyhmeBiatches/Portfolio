@@ -1,0 +1,71 @@
+﻿@using MarckPro.Helpers;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+            </div>
+            <div class="navbar-collapse collapse">
+                
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div style="position: relative; left: 0; top: 0;">
+        <img src="~/Content/150842_1759698597380_6256332_n.jpg" width="150px" height="150px" style="position: relative; top: 0; left: 0;"" />
+
+        <div class="container"  style="position: absolute;  top: 150px; left: 0px;">
+            @{ var controller = ViewContext.RouteData.Values["controller"]; }
+            <div class="navbar navbar-default">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="@Html.IsActive("Showreel", "Home")">@Html.ActionLink("Showreel", "Showreel", "Home") </li>
+                    <li class="@Html.IsActive("Bio", "Home")">@Html.ActionLink("Biografi", "Bio", "Home")</li>
+                    <li class="@Html.IsActive("Index", "Achieveds")">@Html.ActionLink("Acheived", "Index", "Achieveds")</li>
+                    <li class="@Html.IsActive("Index", "PicVid")">@Html.ActionLink("Billeder/videoer", "Index", "PicVid")</li>
+
+                    @*<li class="@Html.IsActive("_LoginPartial", "Shared")">@Html.Partial("_LoginPartial")</li>*@
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute;  top: 370px; left: 25px;">
+        <h3>Kontakt</h3>
+        <p>Tlf:12345678</p>
+        <p>Mail:matt@matt.matt</p>
+        <p>By: CopenFUCK</p>
+        <a href="https://www.facebook.com">Facebook</a>
+        
+    </div>
+    <div style="position: absolute;  top: 545px; left: 25px;">
+        <a href="https://www.instagram.com">Instagram</a>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
